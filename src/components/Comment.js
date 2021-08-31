@@ -5,6 +5,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import PersonIcon from '@material-ui/icons/Person';
 import Button from '@material-ui/core/Button';
 import axios from 'axios'
+import CommentView from "./CommentView"
 
 const updateCommentsForUser = async reqObj => {
   const response = await axios.post(`http://localhost:5000/api/comments`,reqObj)
@@ -18,10 +19,12 @@ const updateCommentsForUser = async reqObj => {
 }
 
 
-const Comment = ({currentUserID, itemID}) => {
+const Comment = ({currentUserID, itemID, currentUserName}) => {
     const useStyles = makeStyles((theme) => ({
         margin: {
-          margin: theme.spacing(1),
+          border: "1px solid black",
+          padding: 6,
+          margin: 10
         },
       }));
       const classes = useStyles();
@@ -67,8 +70,10 @@ const Comment = ({currentUserID, itemID}) => {
         className={classes.margin}
         value={commentVal}
         onChange={(e) => setCommentVal(e.target.value)}
+        placeholder={"Add a Comment"}
         id="input-with-icon-textfield"
         InputProps={{
+          disableUnderline: true,
           startAdornment: (
             <InputAdornment position="start">
               <PersonIcon />
@@ -82,7 +87,7 @@ const Comment = ({currentUserID, itemID}) => {
      <div>
          {commentArr.map((val, i) => (
              <div key={i}>
-                 {val.comment}
+              <CommentView commentDetails={val} currentUserName={currentUserName}/>
              </div>
          ))}
      </div>

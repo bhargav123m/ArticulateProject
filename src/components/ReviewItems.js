@@ -42,7 +42,7 @@ const ReviewItems = ({currentUser}) => {
       <div className="grid grid--columns-3">
         { loading && <div className="review-items__loading">Loading...</div>}
         { !loading && items.map(item =>
-          <Link to={`/items/${item.id}/${currentUser.id}`} key={item.id} className="grid__item" style={toMaterialStyle(item.id, 100)}>
+          <Link to={`/items/${item.id}/${currentUser.id}/${currentUser.name}`} key={item.id} className="grid__item" style={toMaterialStyle(item.id, 100)}>
             { item.title }
           </Link>
         ) }

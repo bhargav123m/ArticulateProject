@@ -7,6 +7,6 @@ export default ({match}) => (
     <div><Link to="/">Back to dashboard</Link>
     <h3>Item {match.params.itemId}</h3>
     </div>
-    <Comment itemID={match.params.itemId} currentUserID={match.params.currentUserId}/>
+    <Comment itemID={match.params.itemId} currentUserID={match.params.currentUserId} currentUserName={match.params.currentUserName}/>
   </div>
 )

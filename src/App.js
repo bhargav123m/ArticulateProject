@@ -36,7 +36,7 @@ const App = () => {
               path="/"
               render={() => <ReviewItems currentUser={currentUser} /> }
             />
-            <Route path="/items/:itemId/:currentUserId" component={ReviewItem} />
+            <Route path="/items/:itemId/:currentUserId/:currentUserName" component={ReviewItem} />
           </div>
         </Router>
       </div>
