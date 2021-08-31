@@ -1,0 +1,16 @@
+.app {
+  min-width: 550px;
+}
+
+.app__content-container {
+  position: relative;
+  display: flex;
+  height: auto;
+  min-height: calc(100vh - 5rem);
+  background-color: #efefef;
+}
+
+.app__content {
+  padding: 2rem;
+  width: 100%;
+}

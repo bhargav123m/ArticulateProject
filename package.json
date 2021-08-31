@@ -1,0 +1,46 @@
+{
+  "name": "js-tech-challenge-start-kit",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start-client": "react-scripts start",
+    "build-client": "react-scripts build",
+    "start-server": "nodemon server/server.js",
+    "start": "concurrently --kill-others-on-fail \"yarn start-server\" \"yarn start-client\"",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "classnames": "^2.2.5",
+    "cors": "^2.8.5",
+    "express": "^4.16.2",
+    "material-color-hash": "^0.1.4",
+    "morgan": "^1.9.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.7"
+  },
+  "proxy": "http://localhost:5000/",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

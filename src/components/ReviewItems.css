@@ -1,0 +1,31 @@
+.review-items {
+  margin: 0 auto;
+}
+
+.review-items__loading {
+  margin: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: flex-start;
+}
+
+.grid > .grid__item {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 2rem;
+  width: 15rem;
+  height: 15rem;
+  text-decoration: none;
+}
+
+.grid__item:hover {
+  border-color: #999;
+}
